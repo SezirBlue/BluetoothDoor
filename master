@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "close" > status
+echo "close" > postStatus
+while true; do
+sleep 2
+sudo ./check.bt
+sleep 2
+sudo python3 programs.py
+done

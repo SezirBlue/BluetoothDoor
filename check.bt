@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo l2ping -c 1 14:56:8E:6F:7E:4A  &> /dev/null
+
+if [ $? -eq 0 ]
+then
+	echo "open" > status
+else
+	echo "close" > status 
+fi
+
