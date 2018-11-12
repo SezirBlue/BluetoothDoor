@@ -1,7 +1,10 @@
 #!/bin/bash
 
+#ping bluetooth adress send output to void
 sudo l2ping -c 1 14:56:8E:6F:7E:4A  &> /dev/null
 
+
+#if exit code indicates that a device was found
 if [ $? -eq 0 ]
 then
 	echo "open" > status

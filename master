@@ -1,9 +1,17 @@
 #!/bin/bash
+
+#set state of lock to closed 
 echo "close" > status
 echo "close" > postStatus
+
+#do forever
 while true; do
+
+#check for bluetooth device
 sleep 2
 sudo ./check.bt
+
+#run motor controller
 sleep 2
 sudo python3 programs.py
 done
